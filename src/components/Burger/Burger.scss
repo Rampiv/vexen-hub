@@ -1,0 +1,81 @@
+@use "../../styles/style.scss" as *;
+
+.burger-section {
+  height: 100%;
+  position: fixed;
+  background-color: $color1;
+  width: 300px;
+  transition: transform 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(-80%); /* полностью скрыт */
+  top: 0;
+  left: 0; /* фиксируем позицию */
+  z-index: 1000;
+  pointer-events: auto;
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__hamburger {
+    right: 20px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    pointer-events: none;
+  }
+
+  &__svg {
+    top: 0;
+    z-index: -1;
+    right: 60px;
+    transform: translateX(100%);
+    height: 100%;
+    position: absolute;
+    outline: none;
+  }
+
+  &__path {
+    height: 100%;
+    fill: $color1;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    position: absolute;
+    top: 10px;
+  }
+  &__item {
+    color: $white;
+    font-family: sans-serif;
+    padding: 20px 0;
+    font-size: 2em;
+    text-align: center;
+  }
+  &.expanded {
+    transform: translateX(0);
+  }
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: $white;
+  position: absolute;
+  &:nth-child(2) {
+    top: 50%;
+    margin-top: -2px;
+  }
+  &:nth-child(3) {
+    bottom: 0;
+  }
+}

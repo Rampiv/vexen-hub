@@ -1,0 +1,42 @@
+@use "../../styles/style.scss" as *;
+
+.footer {
+  margin-top: auto;
+}
+
+.navigation {
+  width: 100%;
+  height: fit-content;
+  padding: 5px 10px;
+  background: $color1;
+  border-radius:$standartborder $standartborder 0 0;
+  padding: 15px 20px;
+
+  &__list {
+    @include listReset();
+    @include flexible();
+    gap: 30px;
+  }
+
+  &__link {
+    @include flexible();
+    @include standartTransition();
+    gap: 5px;
+    color: $white;
+    @media (hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &:focus,
+    &:active {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+  }
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+}
