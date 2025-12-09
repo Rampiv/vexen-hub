@@ -96,9 +96,14 @@
   }
   &__link {
     @include btnReset();
+    @include standartTransition();
     color: $white;
     text-align: left;
     font-size: inherit;
+    border-bottom: 1px solid rgb(0, 0, 0, 0);
+    &:hover {
+      border-bottom: 1px solid $color2;
+    }
   }
 }
 
@@ -117,6 +122,31 @@
   @include flexible();
   width: 100%;
   flex-direction: column;
+  &__error {
+    position: relative;
+    width: 80%;
+    user-select: none;
+  }
+  &__error-img {
+    border-radius: 30px;
+    filter: blur(10px);
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+  }
+  &__error-message {
+    @include textType3();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 30px;
+    box-shadow: 0 0 30px 10px $color2;
+    user-select: none;
+  }
 }
 
 .miniguide {
@@ -281,6 +311,8 @@
     @include listReset();
   }
   &__accordion-item {
+    @include textReset();
+    @include textType1();
     h3 {
       @include textReset();
       @include textType15();
@@ -324,6 +356,9 @@
       @include textType2();
     }
   }
+  .ytguide__error-message {
+    @include textType2();
+  }
 }
 
 @media (max-width: 860px) {
@@ -344,6 +379,10 @@
       @include textType15();
     }
   }
+
+  .ytguide__error-message {
+    @include textType15();
+  }
   .weapon {
     &__item {
       @include flexible();
@@ -356,6 +395,7 @@
   }
 
   .team__accordion-item {
+    @include textType05();
     h3 {
       @include textType1();
     }
@@ -383,6 +423,10 @@
     }
   }
 
+  .ytguide__error-message {
+    @include textType1();
+  }
+
   .plusminus {
     &__descr {
       @include textType2();
@@ -401,6 +445,8 @@
   }
 
   .team__accordion-item {
+    @include textType05();
+
     h3 {
       @include textType1();
     }
@@ -453,6 +499,9 @@
       }
     }
   }
+  .ytguide__error-message {
+    @include textType08();
+  }
   .glossary {
     .accordion__inner {
       padding: 7px;
@@ -499,6 +548,8 @@
     }
   }
   .team__accordion-item {
+    @include textType03();
+
     h3 {
       @include textType05();
     }

@@ -12,6 +12,8 @@
   background: $white;
 
   &__image-container {
+    display: flex;
+    align-items: flex-end;
     width: 100%;
     max-height: inherit;
     height: 100%;

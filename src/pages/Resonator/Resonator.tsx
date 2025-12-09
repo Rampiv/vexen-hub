@@ -204,7 +204,17 @@ export const Resonator = () => {
                   YT={resonator.youtubeVideoPreview}
                 />
               ) : (
-                <span className="ytguide__error-YT">Ролик не найден</span>
+                <div className="ytguide__error">
+                  <img
+                    src={resonator.youtubeVideoPreview}
+                    alt="Видео недоступно"
+                    onError={() =>
+                      console.warn("Fallback image failed to load")
+                    }
+                    className="ytguide__error-img"
+                  />
+                  <span className="ytguide__error-message">Ролик в процессе создания</span>
+                </div>
               )}
             </div>
 
