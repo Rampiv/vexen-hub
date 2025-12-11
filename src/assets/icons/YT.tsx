@@ -1,8 +1,8 @@
 export const YT = () => {
   return (
     <svg
-      width="800px"
-      height="800px"
+      width="16px"
+      height="16px"
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

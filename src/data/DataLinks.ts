@@ -1,11 +1,8 @@
-import { YT } from "@assets/icons"
-import TGimg from "@assets/icons/TG.webp" 
-import TikTok from "@assets/icons/TikTok.webp" 
-
+import { YT, TG, TikTok } from "@assets/icons"
 
 export const DataLinks = [
   {
-    img: TGimg,
+    img: TG,
     text: "ТГ КАНАЛ",
     link: "https://t.me/RealVexen",
     id: "footertg",

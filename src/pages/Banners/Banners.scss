@@ -32,16 +32,16 @@
   &__item {
     img {
       border-radius: 44px;
-      max-height:  675px;
+      max-height: 675px;
     }
   }
-  &__descr{
+  &__descr {
     @include textType2();
     font-family: "Helvetica";
     font-weight: 400;
     color: $white;
     margin-bottom: 40px;
-    &-date{
+    &-date {
       border-bottom: 1px solid $color8;
     }
   }
@@ -51,6 +51,39 @@
   .future {
     &__banners {
       grid-template-columns: auto;
+    }
+  }
+}
+
+@media (max-width: 392px) {
+  .future {
+    &__h2 {
+      @include textType2();
+    }
+    &__descr {
+      @include textType15();
+    }
+    &__h3 {
+      @include textType3();
+      font-family: "bebas";
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 277px) {
+  .future {
+    &__h2 {
+      @include textType15();
+    }
+    &__descr {
+      @include textType1();
+    }
+    &__h3 {
+      @include textType2();
+      font-family: "bebas";
+      font-weight: 400;
+      text-align: center;
     }
   }
 }

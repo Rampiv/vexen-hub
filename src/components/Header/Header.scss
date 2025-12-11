@@ -95,3 +95,15 @@
     }
   }
 }
+
+@media (max-width: 179px) {
+  .header {
+    &__link {
+      @include textType08();
+      padding: 5px;
+    }
+    &__link-img{
+      margin-bottom: 10px;
+    }
+  }
+}

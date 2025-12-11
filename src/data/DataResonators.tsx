@@ -314,7 +314,7 @@ export const DataResonators = [
     rarity: 4,
     weapon: "Rectifier",
     previewImg: bulingPreview,
-    youtubeVideoId: "",
+    youtubeVideoId: "K2GwBbZomIw",
     youtubeVideoPreview: bulingYTPreview,
     MiniGuideImg: bulingMiniGuide,
     BaseDescr:

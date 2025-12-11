@@ -131,10 +131,15 @@ export const Resonators = () => {
           </li>
           <li className="resonators__elements-item">
             <button
-              className="resonators__elements-btn_reset"
+              className="resonators__elements-btn resonators__elements-btn_reset"
               onClick={e => handleSelectElement("all")}
             >
-              Сброс
+              <img
+                src={Electro}
+                alt="reset"
+                className="resonators__elements-img-reset"
+              />
+              <span>Сброс</span>
             </button>
           </li>
         </ul>

@@ -245,10 +245,43 @@
   }
   .chibi__hint-text {
     @include textType15();
-    filter: invert(1)
+    filter: invert(1);
   }
   .links__item {
-    @include textType1();
     padding: 10px;
+    a {
+      @include textType1();
+    }
+  }
+  .pasta__text {
+    @include textType1();
+  }
+}
+
+@media (max-width: 179px) {
+  .chibi__hint-text {
+    @include textType1();
+    filter: invert(1);
+  }
+  .chibi {
+    &__cloud-text {
+      font-size: 5px;
+      line-height: 5px;
+    }
+    &__hint {
+      left: -62px;
+      svg {
+        width: 20px;
+      }
+    }
+  }
+  .pasta__text {
+    @include textType08();
+  }
+  .links__item {
+    padding: 5x;
+    a {
+      @include textType08();
+    }
   }
 }
