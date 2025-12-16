@@ -6,6 +6,7 @@
   grid-template-columns: 3fr 1fr;
   column-gap: 20px;
   row-gap: 10px;
+  margin-bottom: 20px;
   &__block {
     padding: 20px;
     background-color: $color1;
@@ -84,7 +85,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
   &__timer-container {
     @include flexible();
     gap: 20px;
@@ -121,6 +121,26 @@
     &-date {
       border-bottom: 1px solid $color9;
     }
+  }
+}
+
+.changes-block {
+  &__list {
+    @include listReset();
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__descr,
+  &__data {
+    @include textType07();
+  }
+  &__data {
+    color: $color2;
   }
 }
 

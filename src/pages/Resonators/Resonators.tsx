@@ -62,7 +62,7 @@ export const Resonators = () => {
                 <img
                   src={img}
                   alt={`Element ${key}`}
-                  className="resonators__elements-img"
+                  className={`resonators__elements-img ${selectedElement === key && "resonators__elements-img_zoom"}`.trim()}
                 />
               </button>
             </li>
