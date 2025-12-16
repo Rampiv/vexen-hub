@@ -83,6 +83,12 @@
   font-size: 0.5em;
 }
 
+@mixin textType07() {
+  @include textReset();
+  @include textSettings();
+  font-size: 0.7em;
+}
+
 @mixin textType08() {
   @include textReset();
   @include textSettings();

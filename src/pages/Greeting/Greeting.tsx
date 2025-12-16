@@ -7,9 +7,20 @@ import { RealiseTimer } from "../../components"
 const PATCH_2_7_RELEASE = new Date("2025-12-24T11:00:00Z").getTime()
 const links = [
   { link: "/resonators", title: "Гайд на персонажей" },
-  { link: "/", title: "Гайды на механики" },
-  { link: "/", title: "Глоссарий" },
-  { link: "/", title: "Гайды на механики" },
+  { link: "/", title: "Гайды на механики (скоро)" },
+  { link: "/", title: "Глоссарий (скоро)" },
+]
+const changes = [
+  {
+    link: "/resonator/Buling",
+    text: <>Добавлен базовый гайд на <span style={{"textDecoration": "underline", "fontWeight": "bold"}}>Булинг</span></>,
+    data: "- 16.12.25 -",
+  },
+  {
+    link: "/resonator/Chisa",
+    text: <>Добавлен базовый гайд на <span style={{"textDecoration": "underline", "fontWeight": "bold"}}>Чису</span></>,
+    data: "- 16.12.25 -",
+  },
 ]
 
 export const Greeting = () => {
@@ -101,6 +112,25 @@ export const Greeting = () => {
                 <></>
               ),
             )}
+          </ul>
+        </div>
+        <div className="greeting__block changes-block">
+          <h2 className="nav-block__h2">Последние изменения</h2>
+          <ul className="changes-block__list">
+            {changes.map((item, index) => {
+              return (
+                <li className="changes-block__item">
+                  <Link
+                    to={item.link}
+                    className="changes-block__link"
+                    key={`${index}список ссылок greeting`}
+                  >
+                    <p className="changes-block__descr">{item.text}</p>
+                    <p className="changes-block__data">{item.data}</p>
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </section>

@@ -20,6 +20,11 @@
     max-width: 70px;
     width: 100%;
   }
+  &__elements-img_zoom{
+    transform: scale(1.2);
+    box-shadow: 0 0 5px 5px $color2;
+    border-radius: 50%;
+  }
   &__elements-list {
     @include listReset();
     display: grid;
