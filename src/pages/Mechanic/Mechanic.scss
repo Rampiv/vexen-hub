@@ -13,6 +13,7 @@
     @include textType2();
     margin-bottom: 20px;
     width: 100%;
+    text-decoration: underline;
   }
   p {
     @include textType1();
